@@ -25,9 +25,9 @@ const assignid = (req,res,next)=>{
 
 app.use(assignid);
 
-// app.use(morgan(':id :param :method :status :url "HTTP/:http-version"'));
+app.use(morgan(':id :param :method :status :url "HTTP/:http-version"'));
 
-// app.use(morgan(':id :param :method :status :url "HTTP/:http-version"',{stream:accessLogStream}));
+app.use(morgan(':id :param :method :status :url "HTTP/:http-version"',{stream:accessLogStream}));
 
 app.get('/',(req,res)=>{
     res.end('Morgan Logger App');
